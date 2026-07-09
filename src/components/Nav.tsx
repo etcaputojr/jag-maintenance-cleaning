@@ -1,125 +1,79 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { motion, useReducedMotion } from "motion/react";
-import { Phone, List, X } from "@phosphor-icons/react";
+import { List, Phone, X } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
 
-const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+const links = [
+  { href: "#services", label: "Services" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const reduce = useReducedMotion();
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    function onScroll() {
-      setScrolled(window.scrollY > 60);
-    }
+    const onScroll = () => setIsScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <motion.header
-      initial={reduce ? false : { y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${
-        scrolled
-          ? "bg-surface-dark/95 backdrop-blur-md border-b border-border-dark"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="max-w-[1200px] mx-auto px-6 h-[72px] flex items-center justify-between">
-        {/* Logo — left */}
-        <a
-          href="#"
-          className="shrink-0 flex items-center"
-          aria-label="JAG Maintenance and Cleaning — Home"
-        >
+    <header className={`site-nav ${isScrolled ? "site-nav--scrolled" : ""}`}>
+      <nav className="site-nav__inner" aria-label="Primary navigation">
+        <a className="site-nav__brand" href="#top" aria-label="JAG Maintenance and Cleaning home">
           <Image
             src="/jag-logo.png"
             alt="JAG Maintenance and Cleaning LLC"
             width={1254}
             height={1254}
             priority
-            className="h-12 w-auto"
-            style={{ objectFit: "contain" }}
           />
         </a>
 
-        {/* Desktop links — center */}
-        <div className="hidden md:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-ink/70 hover:text-gold transition-colors duration-200 text-sm font-medium tracking-wide"
-            >
+        <div className="site-nav__links">
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>
               {link.label}
             </a>
           ))}
         </div>
 
-        {/* Desktop CTA — right */}
-        <div className="hidden md:flex items-center gap-4">
-          <a
-            href="tel:"
-            className="flex items-center gap-2 text-ink/70 hover:text-gold transition-colors duration-200 text-sm"
-          >
-            <Phone size={16} weight="fill" />
-            <span className="tracking-wide">Call Us</span>
+        <div className="site-nav__actions">
+          <a className="site-nav__phone" href="tel:+17183754545">
+            <Phone size={17} weight="fill" aria-hidden="true" />
+            <span>(718) 375-4545</span>
           </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center px-5 py-2.5 bg-gold text-surface-dark text-sm font-semibold rounded-md hover:bg-gold-light transition-colors duration-200 tracking-wide"
-          >
+          <a className="button button--gold button--nav" href="#contact">
             Request a Proposal
           </a>
         </div>
 
-        {/* Mobile hamburger — right */}
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-ink p-1"
-          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          className="site-nav__toggle"
+          type="button"
+          onClick={() => setIsOpen((open) => !open)}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         >
-          {mobileOpen ? <X size={24} /> : <List size={24} />}
+          {isOpen ? <X size={26} /> : <List size={28} />}
         </button>
       </nav>
 
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-          className="md:hidden bg-surface-dark/98 backdrop-blur-md border-b border-border-dark px-6 pb-6"
-        >
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block py-3 text-ink/70 hover:text-gold transition-colors text-sm font-medium tracking-wide"
-            >
+      {isOpen && (
+        <div className="mobile-nav" aria-label="Mobile navigation">
+          {links.map((link) => (
+            <a key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setMobileOpen(false)}
-            className="mt-3 inline-flex items-center w-full justify-center px-5 py-3 bg-gold text-surface-dark text-sm font-semibold rounded-md hover:bg-gold-light transition-colors"
-          >
+          <a href="#contact" className="button button--gold" onClick={() => setIsOpen(false)}>
             Request a Proposal
           </a>
-        </motion.div>
+        </div>
       )}
-    </motion.header>
+    </header>
   );
 }
