@@ -26,9 +26,9 @@ export function Hero() {
             <a className="button button--gold" href="#contact">
               Request a Proposal <ArrowDownRight size={19} weight="bold" aria-hidden="true" />
             </a>
-            <a className="text-link" href="tel:+17183754545">
+            <a className="text-link" href="tel:+19174166472">
               <Phone size={17} weight="fill" aria-hidden="true" />
-              Call (718) 375-4545
+              Call (917) 416-6472
             </a>
           </div>
         </motion.div>

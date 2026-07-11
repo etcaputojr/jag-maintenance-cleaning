@@ -42,9 +42,9 @@ export function Nav() {
         </div>
 
         <div className="site-nav__actions">
-          <a className="site-nav__phone" href="tel:+17183754545">
+          <a className="site-nav__phone" href="tel:+19174166472">
             <Phone size={17} weight="fill" aria-hidden="true" />
-            <span>(718) 375-4545</span>
+            <span>(917) 416-6472</span>
           </a>
           <a className="button button--gold button--nav" href="#contact">
             Request a Proposal
