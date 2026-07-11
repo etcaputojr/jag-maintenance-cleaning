@@ -1,6 +1,6 @@
 # JAG Maintenance Contact and SEO Execution Plan
 
-Status: Proposed for approval
+Status: Approved on 2026-07-11; scope is Workstream A plus Phases 1–4
 
 ## Outcome
 
@@ -24,7 +24,7 @@ Start with a hidden honeypot and strict server-side validation. Add Cloudflare T
 
 ### Ed provides or approves
 
-- Confirm the recipient inbox. Current source value: `jwren859@aol.com`.
+- Recipient inbox confirmed: `jwren859@aol.com`.
 - Create or authorize a Resend account and API key.
 - Add the Resend SPF and DKIM DNS records for a sending subdomain such as `mail.jagmaintenance.com`.
 - Approve the sender identity, for example `JAG Website <proposals@mail.jagmaintenance.com>`.
@@ -135,34 +135,15 @@ Every page answers a distinct search intent, contains original JAG evidence, is 
 
 All three profiles are verified, complete, consistent with the website, and controlled by a JAG-owned account.
 
-## Phase 5: Authority and legitimate links
-
-### Ed
-
-- Identify current and former BID clients, partner organizations, certifications, memberships, and directories where JAG is legitimately eligible.
-- Secure permission for named testimonials, case studies, and project photography.
-
-### Codex
-
-1. Build a prioritized outreach list centered on client and partner sites, relevant associations, chambers, and legitimate vendor directories.
-2. Draft tailored outreach requesting useful references, vendor-page links, or joint case studies.
-3. Publish proof-led case studies after approval.
-4. Track earned links and reject paid-link packages, mass submissions, and reciprocal-link schemes.
-
-### Done when
-
-JAG has a repeatable outreach process and begins earning relevant, editorially legitimate links and citations.
-
 ## Measurement cadence
 
 - Weekly during launch: indexing status, crawl errors, form delivery, and profile verification.
 - Monthly after launch: non-branded impressions, clicks, CTR, indexed pages, landing pages, calls, emails, proposal submissions, and qualified leads.
 - Use Search Console query data to choose the next content improvement; do not judge success only by a small hand-picked keyword list.
 
-## Proposed execution order
+## Approved execution order
 
-1. Approve this plan and confirm the contact-form recipient/business facts.
-2. Implement Workstream A and Phase 1 together.
-3. Deploy and complete Phase 2 account verification.
-4. Gather real proof while building Phase 3 pages.
-5. Complete Phase 4 profiles, then run Phase 5 outreach continuously.
+1. Implement Workstream A and Phase 1 together.
+2. Deploy and complete Phase 2 account verification.
+3. Gather real proof while building Phase 3 pages.
+4. Complete Phase 4 profiles and the cross-profile consistency audit.

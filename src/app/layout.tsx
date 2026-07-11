@@ -15,14 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JAG Maintenance & Cleaning LLC | NYC Street Cleaning & Power Washing",
+  metadataBase: new URL("https://www.jagmaintenance.com"),
+  title: "NYC Street Cleaning & Power Washing | JAG Maintenance",
   description:
     "Brooklyn-based street cleaning, power washing, and window cleaning serving NYC's five boroughs since 1999. Trusted by Business Improvement Districts across New York City.",
+  alternates: {
+    canonical: "/",
+  },
+  applicationName: "JAG Maintenance & Cleaning LLC",
   openGraph: {
-    title: "JAG Maintenance & Cleaning LLC",
+    title: "NYC Street Cleaning & Power Washing | JAG Maintenance",
     description:
       "Brooklyn-based street cleaning, power washing, and window cleaning serving NYC's five boroughs since 1999.",
+    url: "/",
+    siteName: "JAG Maintenance & Cleaning LLC",
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NYC Street Cleaning & Power Washing | JAG Maintenance",
+    description:
+      "Street cleaning, power washing, and window cleaning for Business Improvement Districts across New York City.",
   },
 };
 
