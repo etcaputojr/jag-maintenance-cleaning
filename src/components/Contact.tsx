@@ -4,15 +4,34 @@ import { useState, type FormEvent } from "react";
 import { EnvelopeSimple, Phone } from "@phosphor-icons/react";
 import { SectionReveal } from "./SectionReveal";
 
-type Status = "idle" | "sending" | "sent";
+type Status = "idle" | "sending" | "sent" | "error";
 
 export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("sending");
-    window.setTimeout(() => setStatus("sent"), 700);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact request failed");
+      }
+
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -49,6 +68,10 @@ export function Contact() {
             </div>
           ) : (
             <form className="contact-form" onSubmit={submit}>
+              <label className="contact-form__honeypot" aria-hidden="true">
+                Company website
+                <input name="companyWebsite" tabIndex={-1} autoComplete="off" />
+              </label>
               <label>
                 Name <span aria-hidden="true">*</span>
                 <input name="name" required autoComplete="name" />
@@ -78,6 +101,11 @@ export function Contact() {
               <button className="button button--gold" type="submit" disabled={status === "sending"}>
                 {status === "sending" ? "Sending…" : "Request a Proposal"}
               </button>
+              {status === "error" && (
+                <p className="contact-form__error" role="alert">
+                  We couldn&apos;t send your request. Please try again or call (917) 416-6472.
+                </p>
+              )}
             </form>
           )}
         </SectionReveal>
