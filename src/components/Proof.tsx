@@ -20,7 +20,7 @@ export function Proof() {
       </SectionReveal>
 
       <SectionReveal className="proof__service" delay={0.16}>
-        <strong>25</strong>
+        <strong>27</strong>
         <span>Years of dependable service</span>
       </SectionReveal>
     </section>

@@ -27,9 +27,9 @@ export function Contact() {
           </p>
 
           <div className="contact__details">
-            <a href="tel:+17183754545">
+            <a href="tel:+19174166472">
               <Phone size={21} weight="fill" aria-hidden="true" />
-              <span>(718) 375-4545</span>
+              <span>(917) 416-6472</span>
             </a>
             <a href="mailto:jwren859@aol.com">
               <EnvelopeSimple size={21} weight="fill" aria-hidden="true" />

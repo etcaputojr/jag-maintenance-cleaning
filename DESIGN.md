@@ -131,7 +131,7 @@ Moderate. Purposeful, restrained.
 - Full viewport height (`min-h-[100dvh]`).
 - Background: dark surface with a large photograph on the right half or as a full-bleed overlay.
 - Left/content area: supplied logo image (smaller variant), headline in bronze-gold, subtext in warm white, dual CTAs.
-- CTAs: "Request a Proposal" (gold fill, dark text), "Call (718) 375-4545" (gold outline).
+- CTAs: "Request a Proposal" (gold fill, dark text), "Call (917) 416-6472" (gold outline).
 - No scroll cue. No tagline below CTAs. No eyebrow.
 
 ### Services
