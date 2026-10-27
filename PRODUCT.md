@@ -27,7 +27,7 @@ The brand voice is direct, honest, and workmanlike. Not corporate. Not flashy. N
 
 ## Design Principles
 
-1. **Show the work.** Real photography of real crews on real NYC streets. Before/after shots. BID logos. Not stock photos, not icons pretending to be features.
+1. **Show the work.** NYC street-maintenance imagery, including AI-generated hero and service scenes, can show the nature of the work. Use verified before/after project photos and BID logos when available as evidence of actual work.
 2. **Make it easy to hire us.** Contact form, proposal request, and phone number visible from every scroll position. No hunting for how to reach someone.
 3. **Brooklyn is an identity, not a location.** The five-borough reach is a credential. The HQ in Brooklyn is a point of pride. The geography is part of the brand, not a footer afterthought.
 4. **Trust through proof, not claims.** BID logos, named testimonials from district directors, specific years of service, specific blocks served. Not "we're the best" — "here's who we work with."

@@ -22,11 +22,6 @@
 
 No actionable P0, P1, or P2 differences remain for the agreed direction.
 
-- **P3 — Temporary hero image is intentionally unbranded**
-  - Location: hero photograph.
-  - Evidence: the source mock shows a JAG mark on the foreground vest; the implementation’s generated placeholder photo is labeled as temporary concept imagery and intentionally contains no fabricated brand mark.
-  - Impact: none on layout, hierarchy, or conversion flow; replace with a real JAG field photograph when available.
-
 ## Required fidelity surfaces
 
 - **Fonts and typography:** Geist is used consistently. The display scale, tight tracking, uppercase navigation, and editorial headline hierarchy follow the source; the source’s slightly narrower display treatment is an acceptable variation within the existing product typography rule.
@@ -54,7 +49,6 @@ No actionable P0, P1, or P2 differences remain for the agreed direction.
 
 ## Follow-up polish
 
-- Replace the temporary generated hero image with real JAG crew photography when it arrives.
 - Replace the prospective testimonial label with an approved named BID quote.
 
 final result: passed

@@ -4,24 +4,20 @@ import { SectionReveal } from "./SectionReveal";
 
 export function Proof() {
   return (
-    <section className="proof" aria-label="JAG maintenance credentials">
-      <SectionReveal className="proof__founded">
-        <span className="proof__label">Since</span>
-        <strong>1999</strong>
+    <section className="proof" aria-labelledby="proof-heading">
+      <SectionReveal className="proof__intro">
+        <h2 id="proof-heading">JAG at a glance.</h2>
+        <p>Key details for your contractor shortlist.</p>
       </SectionReveal>
 
-      <SectionReveal className="proof__quote" delay={0.08}>
-        <p>
-          JAG Maintenance &amp; Cleaning LLC has been an essential partner in
-          keeping our district clean, safe, and welcoming. Their reliability
-          shows up every day.
-        </p>
-        <span>Prospective BID partner testimonial</span>
-      </SectionReveal>
-
-      <SectionReveal className="proof__service" delay={0.16}>
-        <strong>27</strong>
-        <span>Years of dependable service</span>
+      <SectionReveal className="proof__details" delay={0.08}>
+        <dl>
+          <div><dt>Established</dt><dd>1999</dd></div>
+          <div><dt>Home base</dt><dd>Brooklyn, New York</dd></div>
+          <div><dt>Service area</dt><dd>All five NYC boroughs</dd></div>
+          <div><dt>Services</dt><dd>Street cleaning · Power washing · Window cleaning</dd></div>
+        </dl>
+        <p>Ask about crew schedules, reporting, and relevant district work in your proposal request.</p>
       </SectionReveal>
     </section>
   );

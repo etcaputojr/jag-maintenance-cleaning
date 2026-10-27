@@ -33,6 +33,8 @@ export function Nav() {
           />
         </a>
 
+        <a className="site-nav__mobile-cta" href="#contact">Get a proposal</a>
+
         <div className="site-nav__links">
           {links.map((link) => (
             <a key={link.href} href={link.href}>
@@ -69,9 +71,6 @@ export function Nav() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="button button--gold" onClick={() => setIsOpen(false)}>
-            Request a Proposal
-          </a>
         </div>
       )}
     </header>

@@ -73,7 +73,7 @@ The JAG logo is a bronze-gold-on-black hexagonal mark with architectural motifs 
 
 1. **Nav** — Fixed, 72px. Transparent on hero → solid dark on scroll.
 2. **Hero** — Full-bleed dark surface. Logo + headline + subtext + dual CTA (Request Proposal + Call).
-3. **Services** — Dark section. Asymmetric grid with real photography.
+3. **Services** — Dark section. Asymmetric grid with service imagery.
 4. **Proof** — Dark or light. BID logo strip + testimonial + years badge.
 5. **About** — Light section. Company story, Brooklyn roots, team photo.
 6. **Contact** — Dark section. Full form + phone + address.
@@ -88,12 +88,12 @@ The JAG logo is a bronze-gold-on-black hexagonal mark with architectural motifs 
 
 ## Imagery
 
-- Real photography of JAG crews on NYC streets. No stock, no illustrations, no AI-generated people.
+- Photographic NYC street-maintenance scenes, including AI-generated crew imagery, are welcome for the hero and services.
 - Hero: large photograph treated with a dark overlay, or a full-bleed image of a cleaned NYC street.
-- Services: one real photo per service category (street cleaning, power washing, window cleaning).
-- About: photo of the founder/team.
+- Services: one image per service category (street cleaning, power washing, window cleaning).
+- About: founder/team photo or imagery reflecting the Brooklyn base.
 - All images: `object-fit: cover`, proper aspect ratios, lazy-loaded below the fold.
-- Alt text as voice: "JAG crew member power washing the sidewalk at Fulton Street and Nostrand Avenue, Brooklyn."
+- Alt text as voice: "Maintenance worker cleaning a storefront window on a New York City sidewalk."
 
 ## Shape Consistency
 
