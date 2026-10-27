@@ -36,13 +36,12 @@ export function Hero() {
 
       <div className="hero__image">
         <Image
-          src="/jag-crew-hero-v1.png"
-          alt="Temporary concept photo of a crew power washing a Brooklyn commercial sidewalk"
+          src="/jag-hero-window-cleaning-black-logo-v8.png"
+          alt="JAG crew members cleaning commercial windows in yellow branded safety vests"
           fill
           priority
           sizes="(max-width: 880px) 100vw, 57vw"
         />
-        <p className="hero__image-note">Temporary concept imagery</p>
       </div>
     </section>
   );
