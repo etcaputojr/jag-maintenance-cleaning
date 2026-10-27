@@ -1,0 +1,51 @@
+{
+  "projectId": "7fff2f4a-d700-4447-a3d3-4d5d295d73fe",
+  "shape": "package",
+  "pkg": "jag-maintenance",
+  "globalName": "JAG",
+  "buildCmd": "node .design-sync/build-inputs.mjs",
+  "srcDir": "src/components",
+  "tsconfig": ".design-sync/tsconfig.json",
+  "cssEntry": ".design-sync/.cache/site.css",
+  "componentSrcMap": {
+    "Nav": "src/components/Nav.tsx",
+    "Hero": "src/components/Hero.tsx",
+    "Proof": "src/components/Proof.tsx",
+    "Services": "src/components/Services.tsx",
+    "About": "src/components/About.tsx",
+    "Contact": "src/components/Contact.tsx",
+    "Footer": "src/components/Footer.tsx",
+    "SectionReveal": null
+  },
+  "overrides": {
+    "Nav": {
+      "cardMode": "single",
+      "viewport": "1440x102"
+    },
+    "Hero": {
+      "cardMode": "single",
+      "viewport": "1440x660"
+    },
+    "Proof": {
+      "cardMode": "single",
+      "viewport": "1440x310"
+    },
+    "Services": {
+      "cardMode": "single",
+      "viewport": "1440x1260"
+    },
+    "About": {
+      "cardMode": "single",
+      "viewport": "1440x1120"
+    },
+    "Contact": {
+      "cardMode": "single",
+      "viewport": "1440x1000"
+    },
+    "Footer": {
+      "cardMode": "single",
+      "viewport": "1440x146"
+    }
+  },
+  "readmeHeader": ".design-sync/conventions.md"
+}
